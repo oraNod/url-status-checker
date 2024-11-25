@@ -1,0 +1,5 @@
+/ansible/latest/modules/shell_module.html
+/ansible/latest/modules/command_module.html
+/ansible/latest/collections/ansible/builtin/file_module.html
+/ansible/latest/modules/file_module.html
+/ansible/latest/modules/k8s_module.html
