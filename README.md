@@ -71,11 +71,10 @@ find /var/www/html/path -name "*.html"
 
 Running the url checker against `pages/*.txt` returns various HTTP status codes. Expected results for these pages are as follows:
 
-- `ansible/2.3-7` pages should return either `200` and `301`.
+- `ansible/2.3-10` pages should return `301`.
 - `ansible/2.9` pages should return `200`.
-- `ansible/2.10` pages should return either `200` and `301`.
-- `ansible/3-11` pages should return `200` as no redirects are in place.
-- `ansible/devel` pages should return either `200` and `301`.
+- `ansible/3-11` pages should return `200`.
+- `ansible/devel` pages should return `200` and `301`.
 - `landing_pages` should return `200`.
 
 > Ansible 11 pages are the current "latest" version. Testing against `ansible_11` pages produces the same results as the "latest" version.
