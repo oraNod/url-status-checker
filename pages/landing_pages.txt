@@ -1,11 +1,17 @@
-#####################################################
-#
-# docs.ansible.com landing pages
-#
-#####################################################
+/404.html
+/ansible-prior-versions.html
+/ansible_community.html
+/automation-tower-chinese-translations.html
+/automation-tower-japanese-translations.html
+/automation-tower-korean-translations.html
+/automation-tower-prior-versions.html
 /collections.html
-
-
-
-
-
+/community.html
+/core-translated-ja.html
+/core.html
+/developers.html
+/ecosystem.html
+/index.html
+/maintainers.html
+/platform.html
+/users.html
