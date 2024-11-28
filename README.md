@@ -116,5 +116,19 @@ Timestamp: YYYY-MM-DD HH:MM:SS
 - `Original Path:` is the path taken from the `.txt` file or the `url` parameter.
 - `Full URL:` is the url that the script constructed from the path and the base hostname.
 - `Status:` is the HTTP status code that the url returns. If a redirect rule is in place the code should be `301` for a permanent redirect or `302`.
-- `Redirects to:` shows the url to which the page is redirected.
+- `Redirects to:` shows the target url to which the page is redirected.
 - `Timestamp:` is self-explanatory.
+
+### Checking target urls
+
+The `.htaccess` configuration file contains the following catch all rule:
+
+```html
+RedirectMatch permanent "^/ansible/(2\.(10|[3-7]))/(.+)\.html$" "/ansible/latest/$3.html"
+```
+
+This is intended for any pages in versions 2.3 to 2.7 and 2.10 that are not redirected to the general `collections.html`; for example `/ansible/2.3/dev_guide/developing_test_pr.html`. This particular page is not for a plugin or module so it should not be redirected to the collections page.
+
+The catch redirect contains a back reference that redirects to a page with the same name in the latest version. So, with the example above, `/ansible/2.3/dev_guide/developing_test_pr.html` redirects to `/ansible/latest/dev_guide/developing_test_pr.html`.
+
+After generating reports, compile all the paths for target urls into `redirect_targets/.txt` files and then run the url checker against those to look for 404 pages.
