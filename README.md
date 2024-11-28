@@ -22,8 +22,9 @@ Redirect rules are defined in `.htaccess` configuration files in the `ansible/do
 - `redirects/ansible_2.5_redirects.txt` corresponds to [ansible/2.5/.htaccess](https://github.com/ansible/docsite/blob/main/ansible/2.5/.htaccess)
 - `redirects/ansible_2.6_redirects.txt` corresponds to [ansible/2.6/.htaccess](https://github.com/ansible/docsite/blob/main/ansible/2.6/.htaccess)
 - `redirects/ansible_2.9_redirects.txt` corresponds to [ansible/2.9/.htaccess](https://github.com/ansible/docsite/blob/main/ansible/2.6/.htaccess)
-- `redirects/ansible_9_redirects.txt` corresponds to [ansible/9/.htaccess](https://github.com/ansible/docsite/blob/main/ansible/9/.htaccess)
 - `redirects/ansible_11_redirects.txt` corresponds to [ansible/11/.htaccess](https://github.com/ansible/docsite/blob/main/ansible/11/.htaccess)
+
+> In the `redirects/ansible_11_redirects.txt` file the version is `latest` because there is a symlink for the most recent version. If the version is `11` then the test returns a status 404 because the `.htaccess` configuration file does not exist in that subdirectory.
 
 Along with the configuration files for specific Ansible versions, there are redirect rules defined in a main `.htaccess` configuration file in the `ansible/docsite` repository.
 
