@@ -14,7 +14,7 @@ from urllib.parse import urljoin
 
 import requests
 
-HOST: str = "http://docs.testing.ansible.com"
+HOST: str = "https://ansible.readthedocs.io/"
 REQUEST_TIMEOUT: int = 30  # seconds
 
 
